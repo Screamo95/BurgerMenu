@@ -1,0 +1,101 @@
+/* Не копировать */
+* {
+  box-sizing: border-box;
+}
+.inner {
+  padding: 30px 0 30px;
+  background-color: black;
+  display: flex;
+  justify-content: end;
+  padding-right: 100px;
+}
+
+/* Копировать */
+.burger__open {
+  cursor: pointer;
+}
+.burger__open-line {
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  margin-bottom: 5px;
+}
+.burger__open-line:last-child {
+  margin-bottom: 0;
+}
+.burger__menu {
+  width: 320px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: -320px;
+  background-color: aqua;
+  padding-top: 50px;
+  padding-left: 50px;
+}
+.burger__menu-inner {
+  display: flex;
+  justify-content: space-between;
+}
+.burger__menu-open {
+  left: 0;
+  animation: burgerOpenX 0.5s linear;
+}
+.burger__menu-close {
+  left: -320px;
+  animation: burgerCloseX 0.5s linear;
+}
+.burger__nav-link {
+  font-size: 20px;
+  margin-bottom: 25px;
+  cursor: pointer;
+}
+.burger__close {
+  cursor: pointer;
+  margin-right: 30px;
+}
+.burger__close-line {
+  width: 30px;
+  height: 3px;
+  background-color: black;
+  margin-bottom: 16px;
+}
+.burger__close-line:first-child {
+  transform-origin: top left;
+  transform: rotate(40deg);
+}
+.burger__close-line:last-child {
+  margin-bottom: 0;
+  transform-origin: bottom left;
+  transform: rotate(320deg);
+}
+.burger__end-line {
+  width: 230px;
+  height: 1px;
+  background-color: black;
+  margin-top: 20px;
+}
+
+@keyframes burgerOpenX {
+  0% {
+    left: -320px;
+  }
+  50% {
+    left: -160px;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes burgerCloseX {
+  0% {
+    left: 0px;
+  }
+  50% {
+    left: -160px;
+  }
+  100% {
+    left: -320px;
+  }
+}
